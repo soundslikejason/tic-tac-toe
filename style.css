@@ -1,0 +1,20 @@
+table {
+	margin: auto;
+  border-collapse: collapse;;
+}
+
+td {
+	width: 80px;
+	height: 80px;
+  text-align: center;
+}
+
+.vert {
+	border-left: 3px solid black;
+	border-right: 3px solid black;
+}
+
+.horiz {
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+}
