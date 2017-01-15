@@ -2,29 +2,33 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Tic Tac Toe</title>
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
+
+  <div class="xo">
+    <input name="player" id="r1" type="radio" value="X" checked><label for="r1"> X </label>
+    <input name="player" id="r2" type="radio" value="O"><label for="r2"> O </label>
+  </div>
+
   <table>
-    <tbody>
       <tr>
-        <td>x</td>
-        <td class="vert">o</td>
-        <td>x</td>
+        <td id="cell1"></td>
+        <td id="cell2" class="vert"></td>
+        <td id="cell3"></td>
       </tr>
       <tr>
-        <td class="horiz">o</td>
-        <td class="horiz vert">x</td>
-        <td class="horiz">o</td>
+        <td id="cell4" class="horiz"></td>
+        <td id="cell5" class="horiz vert"></td>
+        <td id="cell6" class="horiz"></td>
       </tr>
-        <td>x</td>
-        <td class="vert">o</td>
-        <td>x</td>
+        <td id="cell7"></td>
+        <td id="cell8" class="vert"></td>
+        <td id="cell9"></td>
       </tr>
-    </tbody>
   </table>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="index.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
