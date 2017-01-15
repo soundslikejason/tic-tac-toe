@@ -17,10 +17,41 @@ $(document).ready(function() {
         } else {
           $(this).text("O");
         }
+        player = playerTurn(player);
       }
     });
   }
 
+  function playerTurn(player) {
+		counter ++;
+		if (player === "X") {
+			$('#r1').prop("checked", false);
+			$('#r2').prop("checked", true);
+			player = "O";
+		  player = computerTurn(player);
+		} else {
+			$('#r1').prop("checked", true);
+			$('#r2').prop("checked", false);
+			player = "X";
+			player = computerTurn(player);
+		}
+		return player;
+	}
 
-
+  function computerTurn(player) {
+		counter ++;
+		var random = board[Math.floor(Math.random() * board.length)];
+		if (player === "X") {
+			$("#cell" + random).text("X");
+			$('#r1').prop("checked", false);
+			$('#r2').prop("checked", true);
+			player = "O";
+		} else {
+			$("#cell" + random).text("O");
+			$('#r1').prop("checked", true);
+			$('#r2').prop("checked", false);
+			player = "X";
+		}
+    return player;
+  }
 });
