@@ -7,6 +7,10 @@ $(document).ready(function() {
     player = $(this).val();
   });
 
+  $("#reset").click(function() {
+    reset();
+  });
+
   for (var i = 1; i <= 9; i++) {
     $("#cell" + i).on("click", function() {
       if ($(this).text() === "X" || $(this).text() === "O") {
@@ -48,5 +52,14 @@ $(document).ready(function() {
     var indexValue = parseInt(random, 10);
     var index = board.indexOf(indexValue);
     board.splice(index, 1);
+  }
+
+  function reset() {
+    for (var i = 1; i <= 9; i++) {
+      $("#cell" + i).text("");
+    }
+    board = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    counter = 0;
+    player = $("input:radio[name=player]:checked").val();
   }
 });

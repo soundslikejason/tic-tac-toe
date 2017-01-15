@@ -21,4 +21,11 @@ td {
 
 .xo {
 	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#resetGame {
+	text-align: center;
+	margin-top: 10px;
 }
