@@ -106,6 +106,7 @@ $(document).ready(function() {
 		}
 		if (counter === 9 && winner !== true) {
 			alert("TIE!");
+			reset();
 		}
 	}
 
